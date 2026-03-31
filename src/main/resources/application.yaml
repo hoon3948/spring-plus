@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: Expert
+
+#  config:
+#    import: optional:classpath:client-api-config.yml
+#
+#  thymeleaf:
+#    prefix: classpath:/templates/
+#    suffix: .html
+#    mode: HTML
+#    encoding: UTF-8
+#
+#server:
+#  port: 8080
+#  servlet:
+#    context-path: /
+#
+#portone:
+#  api:
+#    base-url: https://api.portone.io
+#
+#app:
+#  ui:
+#    branding:
+#      app-name: A3S_Hub
+#      tagline: 통합 커머스 플랫폼
+#      logo-text: 🏪 A3S Hub
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: health, info
