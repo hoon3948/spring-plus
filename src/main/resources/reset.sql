@@ -1,3 +1,4 @@
+/*
 SET FOREIGN_KEY_CHECKS = 0;
 
 TRUNCATE TABLE users;
@@ -6,3 +7,4 @@ TRUNCATE TABLE managers;
 TRUNCATE TABLE comments;
 
 SET FOREIGN_KEY_CHECKS = 1;
+*/
