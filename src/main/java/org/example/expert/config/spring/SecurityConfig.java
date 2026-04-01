@@ -46,7 +46,7 @@ public class SecurityConfig {
 //                        .requestMatchers("/actuator/**").permitAll()
                         .requestMatchers("/h2-console/**").permitAll()
                         //    - /admin/** → ADMIN 권한만
-                        .requestMatchers("/admin/**").hasRole("ADMIN")
+                        .requestMatchers("/api/admin/**").hasRole("ADMIN")
                         //    - 나머지 → 인증 필요
                         .requestMatchers("/api/**").authenticated()
                         .anyRequest().authenticated()
