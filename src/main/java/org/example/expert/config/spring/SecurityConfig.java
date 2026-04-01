@@ -27,6 +27,9 @@ public class SecurityConfig {
         http
                 // 1. csrf 비활성화 (JWT 방식이므로)
                 .csrf(AbstractHttpConfigurer::disable)
+                .headers(headers -> headers
+                        .frameOptions(frame -> frame.disable()) // H2 콘솔 iframe 허용!
+                )
                 // 2. SessionManagement → STATELESS (JWT 방식이므로)
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
