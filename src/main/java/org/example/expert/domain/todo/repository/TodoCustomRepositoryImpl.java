@@ -3,11 +3,13 @@ package org.example.expert.domain.todo.repository;
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
-import org.example.expert.domain.todo.entity.QTodo;
+import lombok.RequiredArgsConstructor;
 import org.example.expert.domain.todo.entity.Todo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Repository;
+
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -15,13 +17,12 @@ import java.util.Optional;
 
 import static org.example.expert.domain.todo.entity.QTodo.todo;
 
+@Repository
+@RequiredArgsConstructor
 public class TodoCustomRepositoryImpl implements TodoCustomRepository {
 
     private final JPAQueryFactory queryFactory;
 
-    public TodoCustomRepositoryImpl(EntityManager em) {
-        queryFactory = new JPAQueryFactory(em);
-    }
 
     @Override
     public Page<Todo> searchTodos(String weather, Pageable pageable, LocalDateTime startedAt, LocalDateTime endedAt) {

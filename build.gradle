@@ -50,6 +50,9 @@ dependencies {
 
     // env
     implementation 'io.github.cdimascio:dotenv-java:3.0.0'
+
+    // spring security
+    implementation 'org.springframework.boot:spring-boot-starter-security'
 }
 
 tasks.named('test') {
